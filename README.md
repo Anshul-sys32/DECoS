@@ -1,0 +1,3 @@
+The Digital Evidence Chain of Custody System (DECoS) is designed to securely manage and track digital evidence throughout its lifecycle. The primary goal of the project is to ensure the integrity, authenticity, and traceability of evidence used in digital investigations.
+
+The system uses core data structures such as hash tables, linked lists, queues, and stacks to simulate a secure evidence management system. A hash table enables efficient storage and retrieval of evidence using unique identifiers, while a linked list maintains an immutable and chronological chain of custody. Each action performed on evidence, such as registration or access, is recorded as a node in the linked list, ensuring transparency and accountability.
