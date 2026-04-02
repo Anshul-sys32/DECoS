@@ -6,7 +6,6 @@
 #include <ctime>
 using namespace std;
 
-// Simple hash function (DJB2)
 string simpleHash(const string &data) {
     unsigned long hash = 5381;
     for (char c : data) {
