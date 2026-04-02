@@ -91,3 +91,31 @@ void registerEvidence() {
 
     cout << "Evidence registered successfully.\n";
 }
+
+int main() {
+    int choice;
+
+    do {
+        cout << "\n--- Digital Evidence Chain of Custody System ---\n";
+        cout << "1. Register Evidence\n";
+        cout << "2. Request Evidence Access\n";
+        cout << "3. Process Access Request\n";
+        cout << "4. Verify Evidence Integrity\n";
+        cout << "5. View Chain of Custody\n";
+        cout << "0. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1: registerEvidence(); break;
+            case 2: requestAccess(); break;
+            case 3: processAccess(); break;
+            case 4: verifyIntegrity(); break;
+            case 5: viewCustody(); break;
+            case 0: cout << "Exiting system...\n"; break;
+            default: cout << "Invalid choice.\n";
+        }
+    } while (choice != 0);
+
+    return 0;
+}
