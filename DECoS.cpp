@@ -14,3 +14,12 @@ string simpleHash(const string &data) {
     }
     return to_string(hash);
 }
+
+struct Evidence {
+    string evidenceID;
+    string description;
+    string hashValue;
+    CustodyChain custody;
+};
+
+unordered_map<string, Evidence> evidenceTable;
