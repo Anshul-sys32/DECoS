@@ -70,3 +70,24 @@ public:
         }
     }
 };
+
+queue<string> accessQueue;
+stack<string> adminUndo;
+
+void registerEvidence() {
+    Evidence e;
+    cout << "Enter Evidence ID: ";
+    cin >> e.evidenceID;
+    cin.ignore();
+
+    cout << "Enter Evidence Description: ";
+    getline(cin, e.description);
+
+    e.hashValue = simpleHash(e.description);
+    e.custody.addRecord("Evidence Registered", "Admin");
+
+    evidenceTable[e.evidenceID] = e;
+    adminUndo.push(e.evidenceID);
+
+    cout << "Evidence registered successfully.\n";
+}
